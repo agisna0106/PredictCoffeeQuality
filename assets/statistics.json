@@ -1,0 +1,15 @@
+{
+    "dataset": "Coffee Quality Database from CQI",
+    "problem_type": "Regression",
+    "algorithm": "Linear Regression",
+    "target": "Total.Cup.Points",
+    "total_records": 1339,
+    "total_features": 23,
+    "train_size": 1071,
+    "test_size": 268,
+    "rmse": 0.03266717452455296,
+    "mae": 0.009775876578506742,
+    "r2": 0.9999664944577096,
+    "train_r2": 0.9999944626645315,
+    "test_r2": 0.9999664944577096
+}
