@@ -3,6 +3,8 @@
 namespace App\Services;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Client\RequestException;
 
 class MachineLearningService
 {
@@ -48,5 +50,15 @@ class MachineLearningService
                 $item => $item
             ])
             ->toArray();
+    }
+
+    public function predict(array $data): array
+    {
+        $response = Http::timeout(30)
+            ->post('http://127.0.0.1:8000/predict', $data);
+
+        $response->throw();
+
+        return $response->json();
     }
 }
